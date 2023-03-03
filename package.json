@@ -1,0 +1,15 @@
+{
+  "name": "get-started",
+  "version": "1.0.0",
+  "description": "Pacote teste",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Rafael Veiga",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^10.2.0",
+    "cypress-xpath": "^2.0.0"
+  }
+}
