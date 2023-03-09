@@ -2,8 +2,8 @@
 class product_page {
 
     buy_product(){
-        cy.get('div[id="blocoValores"] button')
-        cy.contains('div[id="blocoValores"] button', 'COMPRAR').click()
+        cy.wait(5000)
+        cy.get('div[id="blocoValores"] button[id]').click()
     }
 
 }

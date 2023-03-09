@@ -2,7 +2,7 @@
 class cart {
 
     must_be_cart_page(){
-        cy.get('div[id="steppCarrinho"]').should('have.text', 'Carrinho')
+        cy.get('div[class*="PageCart-styles__Container"] h1').should('have.text', 'Carrinho, etapa 1 de 5')
     }
 
     input_postal_code(postal_code){
@@ -12,11 +12,14 @@ class cart {
     }
 
     select_shipping_method(ship_code){
+        cy.contains('h2', 'FRETE')
+        cy.contains('div', 'Para receber no seu endereço:')
         cy.get('div[class$="shippingContainer"]')
         cy.get(`input[type="radio"][value="${ship_code}"]`).click()
     }
 
     go_to_payment(){
+        cy.wait(5000)
         cy.contains('button[id="buttonGoToPayment"]', 'IR PARA O PAGAMENTO').click()
     }
 

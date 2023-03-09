@@ -1,27 +1,18 @@
 
 class home {
 
-    set_cookies(){
-        cy.wait(5000)
-        cy.get('button[id="onetrust-accept-btn-handler"]').should('have.text', 'Entendi').click({force: true})
-        cy.wait(5000)
-    }
-
     go_main_page(){
         cy.visit('/')
         cy.get('.IconLogoKabum')
-        cy.get('#linkLoginHeader').should('have.text','Login')
+        cy.get('#linkLoginHeader').should('have.text','LOGIN')
     }
 
     go_login_page(user,password){
-        cy.get('#linkLoginHeader').should('have.text','Login')
-        cy.get('#linkLoginHeader').click()
-        cy.get('h1').should('have.text','Identificação')
-        cy.get('#formLogin > h2').should('have.text', 'Já tenho cadastro')
+        cy.wait(5000)
+        cy.contains('h2', 'fazer login')
         cy.get('#inputUsuarioLogin').type(user)
         cy.get('#inputSenhaLogin').type(password)
         cy.get('#botaoLogin').click()
-        cy.setCookie('showpopup','0')
         cy.wait(5000)
         
     }
