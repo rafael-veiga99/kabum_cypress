@@ -7,7 +7,7 @@ import cart from "../pages/cart"
 import cookies from "../helpers/cookies"
 
 
-beforeEach(() =>{
+before(() =>{
     cookies.set_cookies()
     cookies.set_local_storage()
 })
