@@ -19,7 +19,6 @@ class cart {
     }
 
     go_to_payment(){
-        cy.wait(5000)
         cy.contains('button[id="buttonGoToPayment"]', 'IR PARA O PAGAMENTO').click()
     }
 

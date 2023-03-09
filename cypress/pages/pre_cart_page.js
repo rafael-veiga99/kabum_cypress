@@ -1,5 +1,5 @@
 
-class pre_cart_page{
+class pre_cart{
 
     go_to_cart_page(){
         cy.get('button[class*="buttonGoToCart"]')
@@ -8,4 +8,4 @@ class pre_cart_page{
 
 }
 
-export default new pre_cart_page
+export default new pre_cart

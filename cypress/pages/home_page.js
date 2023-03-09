@@ -8,13 +8,12 @@ class home {
     }
 
     go_login_page(user,password){
-        cy.wait(5000)
         cy.contains('h2', 'fazer login')
-        cy.get('#inputUsuarioLogin').type(user)
-        cy.get('#inputSenhaLogin').type(password)
-        cy.get('#botaoLogin').click()
-        cy.wait(5000)
-        
+        cy.contains('label', 'E-mail, CPF ou CNPJ')
+        cy.get('input[type="text"]').type(user)
+        cy.contains('label', 'Senha')
+        cy.get('input[type="password"]').type(password)
+        cy.contains('button', 'Entrar').click() 
     }
 
     user_must_have_logged(){
@@ -22,7 +21,6 @@ class home {
     }
 
     search_product(code){
-        cy.wait(5000)
         cy.get('#barraBuscaKabum').type(code)
         cy.get('div[id="barraBuscaKabum"] button[type="submit"]').click()
         cy.get('.imageCard').click()
