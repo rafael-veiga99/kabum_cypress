@@ -1,7 +1,7 @@
 
 class cart {
 
-    must_be_cart_page(){
+    must_be_in_cart_page(){
         cy.get('div[class*="PageCart-styles__Container"] h1').should('have.text', 'Carrinho, etapa 1 de 5')
     }
 
